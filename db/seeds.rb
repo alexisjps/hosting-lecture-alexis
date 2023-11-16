@@ -7,3 +7,11 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+puts 'destroy in progress'
+Article.destroy_all
+puts 'Destroy done'
+
+puts 'create articles'
+Article.create!(title: 'Super article', body: 'Wow comment faire pour déployer mon application')
+puts 'done'
