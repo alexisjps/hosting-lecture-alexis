@@ -2,6 +2,11 @@
 
 <%= render @article %>
 
+  <% if @article.pictures.attached? %>
+  <% @article.pictures.each do |picture| %>
+    <%= cl_image_tag picture.key, width: 200, height: 200 %>
+    <% end %>
+  <% end %>
 <div>
   <%= link_to "Edit this article", edit_article_path(@article) %> |
   <%= link_to "Back to articles", root_path %>
